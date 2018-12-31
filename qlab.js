@@ -221,7 +221,8 @@ instance.prototype.actions = function(system) {
 		'previous': { label: 'Previous Cue' },
 		'next':     { label: 'Next Cue' },
 		'resume':   { label: 'Resume' },
-		'load':     { label: 'Load Cue'}
+		'load':     { label: 'Load Cue'},
+		'toggleAuditionWindow':     { label: 'toggle Audition Window'}
 	});
 }
 
@@ -283,6 +284,11 @@ instance.prototype.action = function(action) {
 		case 'load':
 			arg = null
 			cmd = '/cue/selected/load';
+			break;
+
+		case 'toggleAuditionWindow':
+			arg = null
+			cmd = '/toggleAuditionWindow';
 			break;
 
 		case 'prewait_dec':
